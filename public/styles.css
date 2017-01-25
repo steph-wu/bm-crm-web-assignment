@@ -25,6 +25,13 @@ h3 {
   line-height: 100%;
 }
 
+hr {
+  border: 0;
+  height: 1px;
+  background: black;
+  margin: 10px 0;
+}
+
 header {
   background-color: #333;
   color: white;

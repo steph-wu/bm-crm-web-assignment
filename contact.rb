@@ -1,10 +1,3 @@
-# Copy your entire Contact class from the old crm assignment here.
-# Then, run the following at the command line:
-#
-#   ruby test/contact_test.rb
-#
-# If your implementation of the Contact class is 'right', then you should see that all tests pass!
-
 class Contact
   attr_accessor :first_name, :last_name, :email, :note
   attr_reader :id
@@ -12,7 +5,6 @@ class Contact
   @@contacts = []
   @@next_id = 1
 
-  # This method should initialize the contact's attributes
   def initialize(first_name, last_name, email, note)
     @first_name = first_name
     @last_name = last_name
@@ -22,72 +14,50 @@ class Contact
     @@next_id += 1
   end
 
-  # This method should call the initializer,
-  # store the newly created contact, and then return it
   def self.create(first_name, last_name, email, note)
-    # 1. Initialize a new Contact with a unique ID
     new_contact = self.new(first_name, last_name, email, note)
-    # 2. Add the new Contact to the list of all contacts
     @@contacts << new_contact
-    # 3. Return new object
     return new_contact
   end
 
-  # This method should return all of the existing contacts
   def self.all
     @@contacts
   end
 
-  # This method should accept an id as an argument
-  # and return the contact who has that id
+# FIND BY ID
+
   def self.find(id)
-    @@contacts.each do |contact|
-      return contact if contact.id == id
-    end
-
+    @@contacts.find { |contact| contact.id == id }
   end
 
-  # This method should allow you to specify
-  # 1. which of the contact's attributes you want to update
-  # 2. the new value for that attribute
-  # and then make the appropriate change to the contact
+# UPDATE CONTACT
+
   def update(attribute, new_value)
-
     @@contacts.find { |contact| contact if contact.send("#{attribute}=", new_value) }
-
   end
 
-  # This method should work similarly to the find method above
-  # but it should allow you to search for a contact using attributes other than id
-  # by specifying both the name of the attribute and the value
-  # eg. searching for 'first_name', 'Betty' should return the first contact named Betty
+# FIND BY ATTRIBUTE
+
   def self.find_by(attribute, value)
-
     @@contacts.find { |contact| contact if contact.send(attribute) == value }
-
   end
 
-  # This method should delete all of the contacts
+# DELETE ALL
+
   def self.delete_all
     @@contacts = []
   end
+
+# FULL NAME
 
   def full_name
     "#{first_name} #{last_name}"
   end
 
-  # This method should delete the contact
-  # HINT: Check the Array class docs for built-in methods that might be useful here
+# DELETE SINGLE CONTACT
+
   def delete
     @@contacts.delete(self)
   end
 
-  # Feel free to add other methods here, if you need them.
-
 end
-
-##########################
-
-Contact.create('Mark', 'Zuckerberg', 'mark@facebook.com', 'CEO')
-Contact.create('Sergey', 'Brin', 'sergey@google.com', 'Co-Founder')
-Contact.create('Steve', 'Jobs', 'steve@apple.com', 'Visionary')
