@@ -6,8 +6,14 @@
   <ul>
     <% Contact.all.each do |contact| %>
     <li>
-      <h3><%= contact.first_name %> <%= contact.last_name %> (<%= contact.email %>)</h3><br>
-      <a href="">Edit</a> | <a href="">Delete</a>
+      <h3><a href="/contacts/<%= contact.id %>" class="name"><%= contact.first_name %> <%= contact.last_name %></a> (<%= contact.email %>)</h3><br>
+      <form action="/contacts/<%= contact.id %>/edit">
+        <input type="submit" value="Edit Contact" />
+      </form>
+      <form action='/contacts/<%= contact.id %>' method='post'>
+        <input type='hidden' name='_method' value='delete'>
+        <input type='submit' value='Delete Contact'>
+      </form>
     </li>
     <% end %>
   </ul>

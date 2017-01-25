@@ -1,9 +1,7 @@
 require_relative 'contact'
 require 'sinatra'
 
-Contact.create('Mark', 'Zuckerberg', 'mark@facebook.com', 'CEO')
-Contact.create('Sergey', 'Brin', 'sergey@google.com', 'Co-Founder')
-Contact.create('Steve', 'Jobs', 'steve@apple.com', 'Visionary')
+Contact.create("Stephanie", "Wu", "wu.stephanie@live.com", "Me!")
 
 get '/' do
   @crm_app_name = "Contacts Manager"

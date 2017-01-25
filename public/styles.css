@@ -32,6 +32,10 @@ hr {
   margin: 10px 0;
 }
 
+form {
+  display: inline;
+}
+
 header {
   background-color: #333;
   color: white;
@@ -39,6 +43,10 @@ header {
   text-align: center;
 }
 
+.name {
+  color: #000;
+  text-decoration: none;
+}
 
 ul {
   list-style-type: none;

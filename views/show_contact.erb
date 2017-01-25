@@ -5,10 +5,12 @@
       <hr>
       <p><strong>Email:</strong> <%= @contact.email %></p>
       <p><strong>Note:</strong></p>
-      <br>
       <p><%= @contact.note %></p>
     </li>
     <li>
+      <form action="/edit">
+        <input type="submit" value="Edit Contact" />
+      </form>
       <form action='/contacts/<%= @contact.id %>' method='post'>
         <input type='hidden' name='_method' value='delete'>
         <input type='submit' value='Delete Contact'>
