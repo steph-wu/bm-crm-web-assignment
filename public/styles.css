@@ -77,3 +77,10 @@ aside span {
   background-color: #13EFD2;
   padding: 20px;
 }
+
+footer {
+  background-color: #000;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
