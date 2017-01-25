@@ -88,7 +88,6 @@ end
 
 ##########################
 
-steph = Contact.create("Stephanie", "Wu", "wu.stephanie@live.com", "n/a")
-lynna = Contact.create("Lynna", "Nguyen", "jungkook97@live.com", "n/a")
-julie = Contact.create("Julie", "Duong", "mmgoldfish@live.com", "n/a")
-steph_gan = Contact.create("Stephanie", "Gan", "baekbitch@live.com", "n/a")
+Contact.create('Mark', 'Zuckerberg', 'mark@facebook.com', 'CEO')
+Contact.create('Sergey', 'Brin', 'sergey@google.com', 'Co-Founder')
+Contact.create('Steve', 'Jobs', 'steve@apple.com', 'Visionary')
