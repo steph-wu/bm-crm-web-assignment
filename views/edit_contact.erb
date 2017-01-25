@@ -1,0 +1,13 @@
+<aside><h2>Edit contact</h2></aside>
+
+<section class="container">
+  <ul>
+    <form action='/contacts/<%= @contact.id %>' method='post'>
+    <input type='hidden' name='_method' value='put'>
+    <li>First Name: <input type='text' name='first_name' value='<%= @contact.first_name %>'></li>
+    <li>Last Name: <input type='text' name='last_name' value='<%= @contact.last_name %>'></li>
+    <li>Email: <input type='text' name='email' value='<%= @contact.email %>'></li>
+    <li>Note: <input type='text' name='note' value='<%= @contact.note %>'></li>
+    <li><input type='submit' value='Edit Contact'></li>
+  </form>
+</section>

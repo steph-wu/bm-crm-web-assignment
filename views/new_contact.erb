@@ -1,9 +1,13 @@
-<h1>Create new Contact</h1>
+<aside><h2>Create new contact</h2></aside>
 
-<form action='/contacts' method='post'>
-  <input type='text' name='first_name'>
-  <input type='text' name='last_name'>
-  <input type='text' name='email'>
-  <input type='text' name='note'>
-  <input type='submit' value='New Contact'>
-</form>
+<section class="container">
+  <form action='/contacts' method='post'>
+    <ul>
+      <li>First Name: <input type='text' name='first_name'></li>
+      <li>Last Name:<input type='text' name='last_name'></li>
+      <li>Email: <input type='text' name='email'></li>
+      <li>Note: <input type='text' name='note'></li>
+      <li><input type='submit' value='New Contact'></li>
+    </ul>
+  </form>
+</section>

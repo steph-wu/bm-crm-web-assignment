@@ -75,11 +75,12 @@ aside span {
   border-bottom: 2px solid #13EFD2;
 }
 
-.contacts_list {
+.container {
   width: 90%;
   margin: 0 auto;
 }
-.contacts_list li {
+
+.container li {
   margin: 10px auto;
   background-color: #13EFD2;
   padding: 20px;
