@@ -88,7 +88,7 @@ end
 
 ##########################
 
-# steph = Contact.create("Stephanie", "Wu", "wu.stephanie@live.com", "n/a")
-# lynna = Contact.create("Lynna", "Nguyen", "jungkook97@live.com", "n/a")
-# julie = Contact.create("Julie", "Duong", "mmgoldfish@live.com", "n/a")
-# steph_gan = Contact.create("Stephanie", "Gan", "baekbitch@live.com", "n/a")
+steph = Contact.create("Stephanie", "Wu", "wu.stephanie@live.com", "n/a")
+lynna = Contact.create("Lynna", "Nguyen", "jungkook97@live.com", "n/a")
+julie = Contact.create("Julie", "Duong", "mmgoldfish@live.com", "n/a")
+steph_gan = Contact.create("Stephanie", "Gan", "baekbitch@live.com", "n/a")
