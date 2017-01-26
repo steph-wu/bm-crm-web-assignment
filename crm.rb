@@ -1,8 +1,6 @@
 require_relative 'contact'
 require 'sinatra'
 
-Contact.create("Stephanie", "Wu", "wu.stephanie@live.com", "Me!")
-
 get '/' do
   @crm_app_name = "Contacts Manager"
   erb :index
@@ -61,4 +59,8 @@ delete '/contacts/:id' do
   else
     raise Sinatra::NotFound
   end
+end
+
+after do
+  ActiveRecord::Base.connection.close
 end
